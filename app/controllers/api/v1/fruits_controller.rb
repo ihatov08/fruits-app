@@ -16,6 +16,12 @@ class Api::V1::FruitsController < ApplicationController
     render json: fruit
   end
 
+  def destroy
+    fruit = Fruit.find(params[:id])
+    fruit.destroy
+    render json: fruit
+  end
+
   private
 
   def fruit_params
