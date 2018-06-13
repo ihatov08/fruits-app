@@ -7,6 +7,7 @@ class Api::V1::FruitsController < ApplicationController
 
   def create
     fruit = Fruit.create(fruit_params)
+    render json: fruit
   end
 
   def update
